@@ -17,10 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} max-w-[360px] mx-auto bg-neutral-900 text-white h-screen border-2`}
+        className={`${inter.className} max-w-md mx-auto bg-neutral-900 text-white h-[100dvh] border-2`}
       >
         {children}
       </body>
     </html>
   );
 }
+
+// crosswalk
+// h-[100dvh] w-full max-w-[430px] min-w-[360px] border-x overflow-y-auto overflow-x-hidden scrollbar-hide
