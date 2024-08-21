@@ -28,3 +28,14 @@
 #### 0.0.4
 
 - layout 크기 설정
+  - 테일윈드 max-w와 max-w-screen 차이
+    - max-w : 컨테이너의 최대 너비를 특정 값으로 설정
+    - max-w-screen : 뷰포트(screen)의 너비에 따라 최대 너비를 설정
+  - Tailwind CSS는 모바일 우선 디자인(Mobile-First Design)을 기본
+    - 처음에 작은 화면(모바일) 크기에 맞춰 레이아웃을 개발한 후, 더 큰 화면(태블릿, 데스크톱 등)에 맞게 점진적으로 스타일을 추가하는 방식으로 작업
+  - 브레이크 포인트
+    - sm (small): min-width: 640px
+    - md (medium): min-width: 768px
+    - lg (large): min-width: 1024px
+    - xl (extra-large): min-width: 1280px
+    - 2xl (2x extra-large): min-width: 1536px
