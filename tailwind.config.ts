@@ -13,6 +13,6 @@ const config: Config = {
       SDSamliphopangche: ["SDSamliphopangche_Basic"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
 export default config;

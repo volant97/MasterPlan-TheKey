@@ -39,3 +39,14 @@
     - lg (large): min-width: 1024px
     - xl (extra-large): min-width: 1280px
     - 2xl (2x extra-large): min-width: 1536px
+
+#### 0.0.5
+
+- 스크롤바 숨기기 플러그인 설치 및 적용
+  - npm i tailwind-scrollbar-hide 설치
+  - plugins: [require("tailwind-scrollbar-hide")] 작성
+  - scrollbar-hide 적용
+    - 최외곽 layout - body
+      - (max-w-md) h-[100dvh] overflow-y-hidden
+    - 적용할 layout 또는 page - div
+      - w-full h-[100dvh] overflow-y-auto overflow-x-hidden scrollbar-hide

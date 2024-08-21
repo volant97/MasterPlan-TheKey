@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} max-w-md h-[100dvh] mx-auto bg-neutral-900 text-white border-2 scrollbar-hide`}
+        className={`${inter.className} max-w-md h-[100dvh] mx-auto bg-neutral-900 text-white border-2 border-gray-600 overflow-y-hidden`}
       >
         {children}
       </body>
