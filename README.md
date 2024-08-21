@@ -18,3 +18,9 @@
   - page 정리
   - layout 정리
   - globals css 정리
+
+#### 0.0.3
+
+- globals.css 폰트 추가
+  - 전역 폰트 설정
+  - 테마에 폰트 추가
