@@ -64,3 +64,13 @@
 
 - layout 설정
   - header, main, footer 설정
+
+#### 0.1.1
+
+- Main Page
+  - 챕터 버튼 컴포넌트 생성
+- React 컴포넌트를 생성 코드 스니펫
+  - rfc : 기본적인 함수형 컴포넌트 (이번 프로젝트 적용)
+  - rafce : 화살표 함수형 컴포넌트 (요약된 표현, 최신 스타일)
+  - import React from 'react'
+    - React 17 이상부터는 해당 문구를 포함하고 있으므로 따로 작성할 필요 없음 = 생략 가능
