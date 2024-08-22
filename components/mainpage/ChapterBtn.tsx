@@ -1,24 +1,20 @@
-"use client";
-
-import { redirect } from "next/navigation";
+import Link from "next/link";
 
 interface Props {
   chapter: string;
+  isActivated: boolean;
 }
 
-export default function ChapterBtn({ chapter }: Props) {
-  const btnClickHandler = () => {
-    console.log(chapter);
-    redirect(`/chapter/${chapter}`);
-  };
-
+export default function ChapterBtn({ chapter, isActivated }: Props) {
   return (
-    <button
-      onClick={btnClickHandler}
-      className="flex flex-col justify-center items-center size-24 rounded-2xl border-4 border-yellow-600 bg-yellow-950 shadow-md shadow-black *:font-SDSamliphopangche cursor-pointer active:scale-95 active:bg-yellow-600"
-    >
-      <p className="text-2xl">{chapter}</p>
-      <p className="text-lg">☆☆☆</p>
-    </button>
+    <Link href={`/chapter/${chapter}`}>
+      <button
+        className="flex flex-col justify-center items-center size-24 rounded-2xl border-4 border-yellow-600 bg-yellow-950 shadow-md shadow-black *:font-SDSamliphopangche cursor-pointer enabled:active:scale-95 enabled:active:bg-yellow-600 disabled:opacity-50 disabled:cursor-default "
+        disabled={!isActivated}
+      >
+        <p className="text-2xl">{chapter}</p>
+        <p className="text-lg">☆☆☆</p>
+      </button>
+    </Link>
   );
 }
