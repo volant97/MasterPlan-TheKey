@@ -13,6 +13,6 @@ const config: Config = {
       SDSamliphopangche: ["SDSamliphopangche_Basic"],
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [require("tailwind-scrollbar-hide"), require("daisyui")],
 };
 export default config;

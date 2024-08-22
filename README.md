@@ -7,6 +7,7 @@
 #### 0.0.1
 
 - Next 설치 및 git 초기 세팅
+  - npx create-next-app@latest
 
 #### 0.0.2
 
@@ -50,3 +51,11 @@
       - (max-w-md) h-[100dvh] overflow-y-hidden
     - 적용할 layout 또는 page - div
       - w-full h-[100dvh] overflow-y-auto overflow-x-hidden scrollbar-hide
+
+### 2024.08.22
+
+#### 0.0.6
+
+- daisyui 설치
+  - npm i -D daisyui@latest 설치
+  - plugins: [require('daisyui')] 작성
