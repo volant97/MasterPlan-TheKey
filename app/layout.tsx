@@ -15,11 +15,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} max-w-md h-[100dvh] mx-auto bg-neutral-900 text-white border-2 border-gray-600 overflow-y-hidden`}
-      >
-        {children}
+    <html
+      lang="en"
+      className="max-w-md h-[100dvh] mx-auto bg-neutral-400 text-white border-2 border-gray-600 overflow-y-hidden"
+    >
+      <body className={`${inter.className}`}>
+        <header className="flex flex-col justify-center items-center h-[10dvh] p-2 *:font-Freesentation border-b-2 border-gray-500">
+          <p className="text-4xl">Master Plan</p>
+          <p className="text-lg font-thin">The Key</p>
+        </header>
+        <main className="w-full h-[82dvh] p-4 overflow-y-auto overflow-x-hidden scrollbar-hide bg-neutral-900">
+          {children}
+        </main>
+        <footer className="flex flex-col justify-center items-center h-[8dvh] p-2 *:font-Freesentation border-t-2 border-gray-500">
+          <p className="text-4xl">하단 Nav</p>
+        </footer>
       </body>
     </html>
   );

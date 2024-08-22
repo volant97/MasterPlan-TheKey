@@ -59,3 +59,8 @@
 - daisyui 설치
   - npm i -D daisyui@latest 설치
   - plugins: [require('daisyui')] 작성
+
+#### 0.0.7
+
+- layout 설정
+  - header, main, footer 설정
