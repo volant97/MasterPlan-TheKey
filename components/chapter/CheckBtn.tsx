@@ -1,5 +1,4 @@
-const box0 =
-  "flex justify-center items-center w-full h-10 border-2 border-blue-700 min-w-10";
+const box0 = "flex justify-center items-center  border-[1px] border-blue-600";
 
 interface Props {
   v: number;

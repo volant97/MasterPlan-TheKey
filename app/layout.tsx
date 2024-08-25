@@ -27,7 +27,7 @@ export default function RootLayout({
             <p className="text-lg font-thin">The Key</p>
           </header>
         </Link>
-        <main className="w-full h-[82dvh] px-8 py-8 overflow-y-auto overflow-x-hidden scrollbar-hide bg-neutral-900">
+        <main className="w-full h-[82dvh] px-6 py-8 overflow-y-auto overflow-x-hidden scrollbar-hide bg-neutral-900">
           {children}
         </main>
         <footer className="flex flex-col justify-center items-center h-[8dvh] p-2 *:font-Freesentation border-t-2 border-gray-500">
