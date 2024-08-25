@@ -97,3 +97,11 @@
 - Main Page
   - 챕터 버튼
     - hover scale 설정
+
+#### 0.2.1
+
+- Chapter Page
+  - test ver page 동기화
+  - params 활용할 수 있도록 동적으로 변환
+- Layout
+  - p값 조정

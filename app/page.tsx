@@ -1,8 +1,8 @@
-import ChapterBtn from "@/components/mainpage/ChapterBtn";
+import ChapterBtn from "@/components/main/ChapterBtn";
 
 export default function MainPage() {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-4 m-2">
+    <div className="flex flex-wrap justify-center items-center gap-4">
       <ChapterBtn chapter="1" isActivated={true} />
       <ChapterBtn chapter="2" isActivated={false} />
       <ChapterBtn chapter="3" isActivated={false} />
