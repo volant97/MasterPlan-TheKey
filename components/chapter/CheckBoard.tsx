@@ -4,6 +4,10 @@ import CheckBtn from "@/components/chapter/CheckBtn";
 // TODO : CheckBoard 안에 tailwind CSS components로 저장해야함
 // TODO : 색상도 테마 저장
 // TODO : 하단 Nav 활용해서 체크박스를 모달 토글로 활용해도 좋을듯
+// TODO : -(x) 채우기 버튼
+// TODO : arr usestate 객체로
+// TODO : 정답코드 생성 페이지 제작
+
 const box1 = "flex w-full";
 const box2 = "flex w-full";
 const box2_col = "flex flex-col w-full";
@@ -61,7 +65,7 @@ export default function CheckBoard() {
         {/* 1단 */}
         <div className={`${box1}`}>
           {/* 1구역 */}
-          <div className={`${box2_col} w-2/3`}></div>
+          <div className={`${box2_col} !w-2/3`}></div>
 
           {/* 2구역 */}
           <div className={`${box2_col}`}>
@@ -87,8 +91,8 @@ export default function CheckBoard() {
         {/* 2단 */}
         <div className={`${box1}`}>
           {/* 4구역 */}
-          <div className={`${box2} w-2/3`}>
-            <div className={`${box3} ${center} w-1/2 text-gray-400`}>무기</div>
+          <div className={`${box2} !w-2/3`}>
+            <div className={`${box3} ${center} !w-1/2 text-gray-400`}>무기</div>
             <div className={`${box3_col}`}>
               <div className={`${box0}`}>솥</div>
               <div className={`${box0}`}>나무</div>
@@ -119,8 +123,8 @@ export default function CheckBoard() {
         <div className="flex">
           <div className={`${box1}`}>
             {/* 7구역 */}
-            <div className={`${box2} w-2/3`}>
-              <div className={`${box3} ${center} w-1/2 text-gray-400`}>
+            <div className={`${box2} !w-2/3`}>
+              <div className={`${box3} ${center} !w-1/2 text-gray-400`}>
                 장소
               </div>
               <div className={`${box3_col}`}>
@@ -145,7 +149,7 @@ export default function CheckBoard() {
             >
               <button
                 onClick={submitBtnClickHandler}
-                className={`${box0} w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
+                className={`${box0} !w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
               >
                 100% 도전
               </button>

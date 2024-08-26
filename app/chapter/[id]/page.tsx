@@ -13,6 +13,8 @@ export default function ChapterPage({ params }: Props) {
   // TODO : 용의자 장소 무기 이름, answer : props로 넘겨야 함
   // TODO : 폰트 개선
   // TODO : json 데이터 정리 및 검증
+  // TODO : input select로
+  // TODO : 수사시작, 각버튼에도 별 부여
 
   const data: CaseData = (jsonData as JsonData)[params.id];
 
@@ -209,7 +211,7 @@ export default function ChapterPage({ params }: Props) {
             <div className="flex gap-2">
               <span>▶</span>
               <div>
-                <p>놀랍게도 솦은 큰 모닥불에 없었다.</p>
+                <p>놀랍게도 솥은 큰 모닥불에 없었다.</p>
               </div>
             </div>
           </div>

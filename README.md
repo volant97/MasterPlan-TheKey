@@ -125,6 +125,8 @@
     - 정답 입력 input
     - 정답 제출 버튼
 
+### 2024.08.26
+
 #### 0.2.4
 
 - Main Page
@@ -144,3 +146,10 @@
   - import test
     - params로 id값 부여
     - type 설정
+
+#### 0.3.2
+
+- Chapter Page
+  - 오타 수정
+  - Tailwind w값 우선순위 설정
+  - chapterJsonData에 checkboardAnswers 추가
