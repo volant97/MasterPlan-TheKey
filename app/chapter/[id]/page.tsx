@@ -5,6 +5,7 @@ import { useState } from "react";
 import jsonData from "@/chapterData.json";
 import { CaseData, JsonData } from "../../../types/chapterJsonData";
 import CasePart from "@/components/chapter/CasePart";
+import SuspectPart from "@/components/chapter/SuspectPart";
 
 interface Props {
   params: { id: string };
@@ -40,52 +41,7 @@ export default function ChapterPage({ params }: Props) {
       />
 
       {/* 2 - 용의자 */}
-      <div className="flex flex-col w-full">
-        <div className="relative w-full h-10">
-          <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
-            용의자
-          </h2>
-          <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
-        </div>
-        <div>
-          <div className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed">
-            <h3 className="text-orange-400 text-xl">레이디 바이올렛</h3>
-            <div>
-              <p>사법권이 미치지 않는 세계 최대의 영역인.</p>
-              <p>바이올렛 제도의 상속자.</p>
-            </div>
-            <div>
-              <p className="text-orange-500">
-                152cm / 오른손잡이 / 파란 눈 / 금방 / 처녀자리
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-2 px-2 py-4 border-b-2 border-orange-400 border-dashed">
-            <h3 className="text-orange-400 text-xl">모브 부사장</h3>
-            <div>
-              <p>텍코 퓨처스의 부사장.</p>
-              <p>메타버스에 들어오라는 요청을 받으면 도망칠 것.</p>
-            </div>
-            <div>
-              <p className="text-orange-500">
-                173cm / 오른손잡이 / 어두운 녹색 눈 / 검은 머리 / 황소자리
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-2 px-2 py-4">
-            <h3 className="text-orange-400 text-xl">버밀리온 공작부인</h3>
-            <div>
-              <p>크고 오래된 비밀을 간직한 키 크고 나이 많은 여성</p>
-              <p>만약 살인자라면, 이번이 처음은 아닐 것이다.</p>
-            </div>
-            <div>
-              <p className="text-orange-500">
-                175cm / 왼손잡이 / 회색 눈 / 백발 / 물고기자리
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SuspectPart data={data.suspects} />
 
       {/* 3 - 장소 */}
       <div className="flex flex-col w-full">
