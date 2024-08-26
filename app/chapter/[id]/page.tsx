@@ -7,13 +7,15 @@ interface Props {
   params: { id: number };
 }
 
-export default function C1Page({ params }: Props) {
+export default function ChapterPage({ params }: Props) {
   // TODO : 용의자 장소 무기 이름, answer : props로 넘겨야 함
   // TODO : 폰트 개선
+  // TODO : 텍스트 데이터화
 
   const [feedBack, setFeedBack] = useState<number | null>(null);
 
   const submitBtnClickHandler = () => {
+    console.log(feedBack);
     if (true) {
       setFeedBack(1);
     } else {
@@ -249,7 +251,7 @@ export default function C1Page({ params }: Props) {
         </div>
       </div>
 
-      {/* 7 - 정답입력 */}
+      {/* 7 - 정답 */}
       <div className="flex flex-col w-full mb-6">
         <div className="relative w-full h-10">
           <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
@@ -260,54 +262,58 @@ export default function C1Page({ params }: Props) {
           </p>
           <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
         </div>
-        <div>
-          <div className="flex flex-col gap-6 px-2 py-4">
-            <div className="flex justify-between gap-2">
-              <h3 className="w-28 text-orange-400 text-2xl">누가?</h3>
-              <input
-                type="text"
-                placeholder="정답 입력"
-                className="w-[60%] bg-transparent border-b-2 border-blue-500 pl-2 outline-none"
-              />
-            </div>
-            <div className="flex justify-between gap-2">
-              <h3 className="w-28 text-orange-400 text-2xl">무엇으로?</h3>
-              <input
-                type="text"
-                placeholder="정답 입력"
-                className="w-[60%] bg-transparent border-b-2 border-blue-500 pl-2 outline-none"
-              />
-            </div>
-            <div className="flex justify-between gap-2">
-              <h3 className="w-28 text-orange-400 text-2xl">어디에서?</h3>
-              <input
-                type="text"
-                placeholder="정답 입력"
-                className="w-[60%] bg-transparent border-b-2 border-blue-500 pl-2 outline-none"
-              />
+        <div className="flex flex-col gap-8">
+          <div>
+            <div className="flex flex-col gap-6 px-2 py-4">
+              <div className="flex justify-between gap-2">
+                <h3 className="w-28 text-orange-400 text-2xl">누가?</h3>
+                <input
+                  type="text"
+                  placeholder="정답 입력"
+                  className="w-[60%] bg-transparent border-b-2 border-blue-500 pl-2 outline-none"
+                />
+              </div>
+              <div className="flex justify-between gap-2">
+                <h3 className="w-28 text-orange-400 text-2xl">무엇으로?</h3>
+                <input
+                  type="text"
+                  placeholder="정답 입력"
+                  className="w-[60%] bg-transparent border-b-2 border-blue-500 pl-2 outline-none"
+                />
+              </div>
+              <div className="flex justify-between gap-2">
+                <h3 className="w-28 text-orange-400 text-2xl">어디에서?</h3>
+                <input
+                  type="text"
+                  placeholder="정답 입력"
+                  className="w-[60%] bg-transparent border-b-2 border-blue-500 pl-2 outline-none"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center items-center mt-6">
-          <button
-            onClick={submitBtnClickHandler}
-            className="w-32 h-12 text-orange-400 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400"
-          >
-            정답 제출
-          </button>
-        </div>
-        <div className="flex flex-col items-center mt-6">
-          {feedBack === 1 ? (
-            <>
-              <p>정답입니다!</p>
-              <p>체크박스 100%까지 도전해볼까요?</p>
-            </>
-          ) : feedBack === 0 ? (
-            <>
-              <p>아쉽네요...</p>
-              <p>다시 한번만 더 추리해볼까요?!</p>
-            </>
-          ) : null}
+          <div className="flex justify-center items-center">
+            <button
+              onClick={submitBtnClickHandler}
+              className="w-32 h-12 text-orange-400 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400"
+            >
+              정답 제출
+            </button>
+          </div>
+          {feedBack !== null && (
+            <div className="flex flex-col items-center">
+              {feedBack === 1 ? (
+                <>
+                  <p>정답입니다!</p>
+                  <p>체크박스 100%까지 도전해볼까요?</p>
+                </>
+              ) : (
+                <>
+                  <p>아쉽네요...</p>
+                  <p>다시 한번만 더 추리해볼까요?!</p>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

@@ -124,3 +124,15 @@
   - 정답 파트 제작
     - 정답 입력 input
     - 정답 제출 버튼
+
+#### 0.2.4
+
+- Main Page
+  - grid 정렬
+- Chapter Page
+  - gap 정렬
+  - 정답 feedback 정렬
+- CheckBoard
+  - w값 %에서 tailwind 권장 값으로 변경
+- CheckBtn
+  - w,h 최소값 다시 부여

@@ -56,12 +56,12 @@ export default function CheckBoard() {
   };
 
   return (
-    <>
+    <div className="flex flex-col gap-8 w-full">
       <div className="flex flex-col w-full h-full *:text-sm *:text-balance *:text-center">
         {/* 1단 */}
         <div className={`${box1}`}>
           {/* 1구역 */}
-          <div className={`${box2_col} w-[60%]`}></div>
+          <div className={`${box2_col} w-2/3`}></div>
 
           {/* 2구역 */}
           <div className={`${box2_col}`}>
@@ -87,10 +87,8 @@ export default function CheckBoard() {
         {/* 2단 */}
         <div className={`${box1}`}>
           {/* 4구역 */}
-          <div className={`${box2} w-[60%]`}>
-            <div className={`${box3} ${center} w-[40%] text-gray-400`}>
-              무기
-            </div>
+          <div className={`${box2} w-2/3`}>
+            <div className={`${box3} ${center} w-1/2 text-gray-400`}>무기</div>
             <div className={`${box3_col}`}>
               <div className={`${box0}`}>솥</div>
               <div className={`${box0}`}>나무</div>
@@ -121,8 +119,8 @@ export default function CheckBoard() {
         <div className="flex">
           <div className={`${box1}`}>
             {/* 7구역 */}
-            <div className={`${box2} w-[60%]`}>
-              <div className={`${box3} ${center} w-[40%] text-gray-400`}>
+            <div className={`${box2} w-2/3`}>
+              <div className={`${box3} ${center} w-1/2 text-gray-400`}>
                 장소
               </div>
               <div className={`${box3_col}`}>
@@ -147,7 +145,7 @@ export default function CheckBoard() {
             >
               <button
                 onClick={submitBtnClickHandler}
-                className={`${box0} w-[60%] hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
+                className={`${box0} w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
               >
                 100% 도전
               </button>
@@ -171,6 +169,6 @@ export default function CheckBoard() {
           ) : null}
         </div>
       </div>
-    </>
+    </div>
   );
 }
