@@ -6,6 +6,7 @@ import jsonData from "@/chapterData.json";
 import { CaseData, JsonData } from "../../../types/chapterJsonData";
 import CasePart from "@/components/chapter/CasePart";
 import SuspectPart from "@/components/chapter/SuspectPart";
+import PlacePart from "@/components/chapter/PlacePart";
 
 interface Props {
   params: { id: string };
@@ -44,47 +45,7 @@ export default function ChapterPage({ params }: Props) {
       <SuspectPart data={data.suspects} />
 
       {/* 3 - 장소 */}
-      <div className="flex flex-col w-full">
-        <div className="relative w-full h-10">
-          <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
-            장소
-          </h2>
-          <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
-        </div>
-        <div>
-          <div className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed">
-            <div className="flex gap-4 items-end">
-              <h3 className="text-orange-400 text-xl">큰 모닥불</h3>
-              <p className="text-orange-500">실외</p>
-            </div>
-            <div>
-              <p>
-                타닥타닥 타는 모닥불가에 다닥다닥 모여서 파닥파닥 춤을 추자.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed">
-            <div className="flex gap-4 items-end">
-              <h3 className="text-orange-400 text-xl">고대 유적</h3>
-              <p className="text-orange-500">실외</p>
-            </div>
-            <div>
-              <p>이끼에 덮여 있기는 하지만, 잘아는 그 유적이다.</p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-1 px-2 py-4">
-            <div className="flex gap-4 items-end">
-              <h3 className="text-orange-400 text-xl">빽빽한 숲</h3>
-              <p className="text-orange-500">실외</p>
-            </div>
-            <div>
-              <p>
-                아름답고, 어둡고, 싶은 숲이지만 부엉이 울음 소리는 무심하다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PlacePart data={data.places} />
 
       {/* 4 - 무기 */}
       <div className="flex flex-col w-full">
