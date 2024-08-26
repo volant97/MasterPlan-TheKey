@@ -136,3 +136,11 @@
   - w값 %에서 tailwind 권장 값으로 변경
 - CheckBtn
   - w,h 최소값 다시 부여
+
+#### 0.3.1
+
+- Chapter Page
+  - 텍스트 데이터화하여 json 파일에 저장
+  - import test
+    - params로 id값 부여
+    - type 설정

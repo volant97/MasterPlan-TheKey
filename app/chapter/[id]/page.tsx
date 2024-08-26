@@ -2,15 +2,19 @@
 
 import CheckBoard from "@/components/chapter/CheckBoard";
 import { useState } from "react";
+import jsonData from "@/chapterData.json";
+import { CaseData, JsonData } from "../../../types/chapterJsonData";
 
 interface Props {
-  params: { id: number };
+  params: { id: string };
 }
 
 export default function ChapterPage({ params }: Props) {
   // TODO : 용의자 장소 무기 이름, answer : props로 넘겨야 함
   // TODO : 폰트 개선
-  // TODO : 텍스트 데이터화
+  // TODO : json 데이터 정리 및 검증
+
+  const data: CaseData = (jsonData as JsonData)[params.id];
 
   const [feedBack, setFeedBack] = useState<number | null>(null);
 
