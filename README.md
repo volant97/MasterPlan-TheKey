@@ -153,3 +153,8 @@
   - 오타 수정
   - Tailwind w값 우선순위 설정
   - chapterJsonData에 checkboardAnswers 추가
+
+#### 0.3.3
+
+- ChapterJsonData
+  - 데이터 최적화 및 type 재설정

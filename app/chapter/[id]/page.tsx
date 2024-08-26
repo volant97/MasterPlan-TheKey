@@ -171,8 +171,9 @@ export default function ChapterPage({ params }: Props) {
               <p className="text-orange-500">무거움</p>
             </div>
             <div>
-              <p>크고 무거운 참나무 토막.</p>
-              <p>누군가가 이걸로 사람을 죽이려고 나무를 죽였다.</p>
+              {data.weapons[1].description.map((v, i) => {
+                return <p key={i}>{v}</p>;
+              })}
             </div>
           </div>
         </div>
@@ -204,8 +205,9 @@ export default function ChapterPage({ params }: Props) {
             <div className="flex gap-2">
               <span>▶</span>
               <div>
-                <p>처녀 자리인 사람이 부영이 아래에 서있었다.</p>
-                <p>분명 성격대로 뭔가 정리하고 있었을 것이다.</p>
+                {data.clues[0].map((v, i) => {
+                  return <p key={i}>{v}</p>;
+                })}
               </div>
             </div>
             <div className="flex gap-2">

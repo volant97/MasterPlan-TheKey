@@ -17,13 +17,13 @@ export interface Place {
 export interface Weapon {
   name: string;
   weight: string;
-  description: string;
+  description: string[];
 }
 
 // 진술
 export interface Statement {
   person: string;
-  text: string;
+  text: string[];
 }
 
 // 정답
@@ -47,7 +47,7 @@ export interface CaseData {
   suspects: Suspect[];
   places: Place[];
   weapons: Weapon[];
-  clues: string[];
+  clues: string[][];
   statements: Statement[];
   answers: Answers;
   checkboardAnswers: CheckboardAnswers;
