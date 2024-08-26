@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import CheckBtn from "@/components/chapter/CheckBtn";
 
