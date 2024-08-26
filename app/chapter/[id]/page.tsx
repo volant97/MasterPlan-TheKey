@@ -8,6 +8,7 @@ import CasePart from "@/components/chapter/CasePart";
 import SuspectPart from "@/components/chapter/SuspectPart";
 import PlacePart from "@/components/chapter/PlacePart";
 import WeaponPart from "@/components/chapter/WeaponPart";
+import CluePart from "@/components/chapter/CluePart";
 
 interface Props {
   params: { id: string };
@@ -52,32 +53,7 @@ export default function ChapterPage({ params }: Props) {
       <WeaponPart data={data.weapons} />
 
       {/* 5 - 단서 */}
-      <div className="flex flex-col w-full">
-        <div className="relative w-full h-10">
-          <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
-            단서
-          </h2>
-          <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
-        </div>
-        <div>
-          <div className="flex flex-col gap-2 px-2 py-4">
-            <div className="flex gap-2">
-              <span>▶</span>
-              <div>
-                {data.clues[0].map((v, i) => {
-                  return <p key={i}>{v}</p>;
-                })}
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <span>▶</span>
-              <div>
-                <p>놀랍게도 솥은 큰 모닥불에 없었다.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CluePart data={data.clues} />
 
       {/* 6 - 진술 */}
       <div className="flex flex-col w-full">
