@@ -173,3 +173,9 @@
 
 - Chapter Page
   - 장소 파트 컴포넌트화
+
+#### 0.3.7
+
+- Chapter Page
+  - 무기 파트 컴포넌트화
+  - map 함수 return 문구 제거하고 간소화

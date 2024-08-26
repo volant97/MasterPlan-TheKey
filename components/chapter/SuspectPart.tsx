@@ -14,23 +14,21 @@ export default function SuspectPart({ data }: Props) {
         <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
       </div>
       <div>
-        {data.map((v, i) => {
-          return (
-            <div
-              key={i}
-              className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed last:border-0"
-            >
-              <h3 className="text-orange-400 text-xl">{v.name}</h3>
-              <div>
-                <p>{v.description}</p>
-                <p>{v.details}</p>
-              </div>
-              <div>
-                <p className="text-orange-500">{v.attributes}</p>
-              </div>
+        {data.map((v, i) => (
+          <div
+            key={i}
+            className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed last:border-0"
+          >
+            <h3 className="text-orange-400 text-xl">{v.name}</h3>
+            <div>
+              <p>{v.description}</p>
+              <p>{v.details}</p>
             </div>
-          );
-        })}
+            <div>
+              <p className="text-orange-500">{v.attributes}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

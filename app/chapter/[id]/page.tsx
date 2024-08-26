@@ -7,6 +7,7 @@ import { CaseData, JsonData } from "../../../types/chapterJsonData";
 import CasePart from "@/components/chapter/CasePart";
 import SuspectPart from "@/components/chapter/SuspectPart";
 import PlacePart from "@/components/chapter/PlacePart";
+import WeaponPart from "@/components/chapter/WeaponPart";
 
 interface Props {
   params: { id: string };
@@ -48,52 +49,7 @@ export default function ChapterPage({ params }: Props) {
       <PlacePart data={data.places} />
 
       {/* 4 - 무기 */}
-      <div className="flex flex-col w-full">
-        <div className="relative w-full h-10">
-          <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
-            무기
-          </h2>
-          <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
-        </div>
-        <div>
-          <div className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed">
-            <div className="flex gap-4 items-end">
-              <h3 className="text-orange-400 text-xl">솥</h3>
-              <p className="text-orange-500">무거움</p>
-            </div>
-            <div>
-              <p>들어올릴 수 있다면 누군가를 후려칠 수도 있다.</p>
-              <p>아니면 속에 든 것을 한 모금만 먹이거나.</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="flex flex-col gap-1 px-2 py-4 border-b-2 border-orange-400 border-dashed">
-            <div className="flex gap-4 items-end">
-              <h3 className="text-orange-400 text-xl">나무토막</h3>
-              <p className="text-orange-500">무거움</p>
-            </div>
-            <div>
-              {data.weapons[1].description.map((v, i) => {
-                return <p key={i}>{v}</p>;
-              })}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="flex flex-col gap-1 px-2 py-4">
-            <div className="flex gap-4 items-end">
-              <h3 className="text-orange-400 text-xl">빗자루</h3>
-              <p className="text-orange-500">보통 무게</p>
-            </div>
-            <div>
-              <p>
-                마녀들은 이걸 타고 날아다닌다고 하지만, 로지코는 청소에만 썼다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <WeaponPart data={data.weapons} />
 
       {/* 5 - 단서 */}
       <div className="flex flex-col w-full">

@@ -1,15 +1,15 @@
-import { Place } from "@/types/chapterJsonData";
+import { Weapon } from "@/types/chapterJsonData";
 
 interface Props {
-  data: Place[];
+  data: Weapon[];
 }
 
-export default function PlacePart({ data }: Props) {
+export default function WeaponPart({ data }: Props) {
   return (
     <div className="flex flex-col w-full">
       <div className="relative w-full h-10">
         <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
-          장소
+          무기
         </h2>
         <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
       </div>
@@ -21,10 +21,12 @@ export default function PlacePart({ data }: Props) {
           >
             <div className="flex gap-4 items-end">
               <h3 className="text-orange-400 text-xl">{v.name}</h3>
-              <p className="text-orange-500">{v.type}</p>
+              <p className="text-orange-500">{v.weight}</p>
             </div>
             <div>
-              <p>{v.description}</p>
+              {v.description.map((v, i) => (
+                <p key={i}>{v}</p>
+              ))}
             </div>
           </div>
         ))}
