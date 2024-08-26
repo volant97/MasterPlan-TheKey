@@ -40,9 +40,9 @@ export interface CheckboardAnswers {
   answer3: number[];
 }
 
-// 사건 데이터
+// JSON 데이터
 export interface CaseData {
-  case: string;
+  title: string;
   description: string;
   suspects: Suspect[];
   places: Place[];

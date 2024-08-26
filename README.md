@@ -158,3 +158,8 @@
 
 - ChapterJsonData
   - 데이터 최적화 및 type 재설정
+
+#### 0.3.4
+
+- Chapter Page
+  - 사건 파트 컴포넌트화

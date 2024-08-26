@@ -4,6 +4,7 @@ import CheckBoard from "@/components/chapter/CheckBoard";
 import { useState } from "react";
 import jsonData from "@/chapterData.json";
 import { CaseData, JsonData } from "../../../types/chapterJsonData";
+import CasePart from "@/components/chapter/CasePart";
 
 interface Props {
   params: { id: string };
@@ -32,26 +33,11 @@ export default function ChapterPage({ params }: Props) {
   return (
     <div className="flex flex-col items-center gap-12">
       {/* 1 - 사건 */}
-      <div className="flex flex-col gap-6">
-        <div className="flex gap-3 w-full text-2xl">
-          <h1 className="text-orange-400">{`사건 ${params.id}`}</h1>
-          <div className="flex items-center ">
-            <span className="h-6 border-l-2 border-orange-400" />
-          </div>
-          <h1>초승달 살인 사건</h1>
-        </div>
-        <div>
-          <div className="flex w-full">
-            <p>
-              탐구 협회의 첫 의뢰로 논리탐정 로지코가 간 곳은 지금까지 본 것
-              중에서 가장 어두운 숲이었습니다. 로지코는 그리자 속에 숨어서
-              마녀들의 집회를 지켜보며, 자기가 제대로 숨었다고 생각했습니다.
-              그래서 마녀 세 명이 다가와 동료 마녀의 살인 사건을 해결해 달라고
-              부탁했을 때 충격을 받았습니다.
-            </p>
-          </div>
-        </div>
-      </div>
+      <CasePart
+        id={params.id}
+        title={data.title}
+        description={data.description}
+      />
 
       {/* 2 - 용의자 */}
       <div className="flex flex-col w-full">
