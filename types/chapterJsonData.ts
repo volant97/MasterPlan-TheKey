@@ -1,6 +1,7 @@
 // 용의자
 export interface Suspect {
   name: string;
+  shortened: string;
   description: string;
   details: string;
   attributes: string;
@@ -9,6 +10,7 @@ export interface Suspect {
 // 장소
 export interface Place {
   name: string;
+  shortened: string;
   type: string;
   description: string;
 }
@@ -16,6 +18,7 @@ export interface Place {
 // 무기
 export interface Weapon {
   name: string;
+  shortened: string;
   weight: string;
   description: string[];
 }

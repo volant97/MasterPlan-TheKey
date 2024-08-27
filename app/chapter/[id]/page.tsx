@@ -50,7 +50,14 @@ export default function ChapterPage({ params }: Props) {
       <AnswerPart data={data.answers} />
 
       {/* 8 - 체크박스 */}
-      <CheckBoard />
+      <CheckBoard
+        suspects={data.suspects}
+        places={data.places}
+        weapons={data.weapons}
+        checkboardAnswers={data.checkboardAnswers}
+      />
+
+      {/* 해설 */}
     </div>
   );
 }

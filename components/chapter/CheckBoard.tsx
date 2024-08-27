@@ -2,12 +2,17 @@
 
 import { useState } from "react";
 import CheckBtn from "@/components/chapter/CheckBtn";
+import {
+  CheckboardAnswers,
+  Place,
+  Suspect,
+  Weapon,
+} from "@/types/chapterJsonData";
 
 // TODO : CheckBoard 안에 tailwind CSS components로 저장해야함
 // TODO : 색상도 테마 저장
 // TODO : 하단 Nav 활용해서 체크박스를 모달 토글로 활용해도 좋을듯
 // TODO : -(x) 채우기 버튼
-// TODO : arr usestate 객체로
 // TODO : 정답코드 생성 페이지 제작
 
 const box1 = "flex w-full";
@@ -20,14 +25,26 @@ const box0 =
   "flex justify-center items-center w-full h-10 text-orange-400 text-xs";
 const center = "justify-center items-center";
 
-export default function CheckBoard() {
+interface Props {
+  suspects: Suspect[];
+  places: Place[];
+  weapons: Weapon[];
+  checkboardAnswers: CheckboardAnswers;
+}
+
+export default function CheckBoard({
+  suspects,
+  places,
+  weapons,
+  checkboardAnswers,
+}: Props) {
   const [arr1, setArr1] = useState<number[]>([0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const [arr2, setArr2] = useState<number[]>([0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const [arr3, setArr3] = useState<number[]>([0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
-  const answer1 = [2, 2, 1, 2, 1, 2, 1, 2, 2];
-  const answer2 = [2, 1, 2, 1, 2, 2, 2, 2, 1];
-  const answer3 = [2, 1, 2, 2, 2, 1, 1, 2, 2];
+  const answer1 = checkboardAnswers.answer1;
+  const answer2 = checkboardAnswers.answer2;
+  const answer3 = checkboardAnswers.answer3;
 
   const [feedBack, setFeedBack] = useState<number | null>(null);
 
@@ -45,6 +62,18 @@ export default function CheckBoard() {
 
     // 상태 업데이트
     setter(arr.map((v, i) => (i === index ? (v === 2 ? 0 : v + 1) : v)));
+  };
+
+  const fillBtnClickHandler = () => {
+    setArr1(arr1.map((v) => (v === 0 ? 2 : v)));
+    setArr2(arr2.map((v) => (v === 0 ? 2 : v)));
+    setArr3(arr3.map((v) => (v === 0 ? 2 : v)));
+  };
+
+  const clearBtnClickHandler = () => {
+    setArr1(arr1.map((v) => 0));
+    setArr2(arr2.map((v) => 0));
+    setArr3(arr3.map((v) => 0));
   };
 
   const submitBtnClickHandler = () => {
@@ -73,9 +102,9 @@ export default function CheckBoard() {
           <div className={`${box2_col}`}>
             <div className={`${box3} ${center} text-gray-400`}>용의자</div>
             <div className={`${box3}`}>
-              <div className={`${box0}`}>레이디</div>
-              <div className={`${box0}`}>모브</div>
-              <div className={`${box0}`}>버밀리온</div>
+              <div className={`${box0}`}>{suspects[0].shortened}</div>
+              <div className={`${box0}`}>{suspects[1].shortened}</div>
+              <div className={`${box0}`}>{suspects[2].shortened}</div>
             </div>
           </div>
 
@@ -83,9 +112,9 @@ export default function CheckBoard() {
           <div className={`${box2_col}`}>
             <div className={`${box3} ${center} text-gray-400`}>장소</div>
             <div className={`${box3}`}>
-              <div className={`${box0}`}>모닥불</div>
-              <div className={`${box0}`}>유적</div>
-              <div className={`${box0}`}>숲</div>
+              <div className={`${box0}`}>{places[0].shortened}</div>
+              <div className={`${box0}`}>{places[1].shortened}</div>
+              <div className={`${box0}`}>{places[2].shortened}</div>
             </div>
           </div>
         </div>
@@ -96,9 +125,9 @@ export default function CheckBoard() {
           <div className={`${box2} !w-2/3`}>
             <div className={`${box3} ${center} !w-1/2 text-gray-400`}>무기</div>
             <div className={`${box3_col}`}>
-              <div className={`${box0}`}>솥</div>
-              <div className={`${box0}`}>나무</div>
-              <div className={`${box0}`}>빗자루</div>
+              <div className={`${box0}`}>{weapons[0].shortened}</div>
+              <div className={`${box0}`}>{weapons[1].shortened}</div>
+              <div className={`${box0}`}>{weapons[2].shortened}</div>
             </div>
           </div>
 
@@ -130,9 +159,9 @@ export default function CheckBoard() {
                 장소
               </div>
               <div className={`${box3_col}`}>
-                <div className={`${box0}`}>모닥불</div>
-                <div className={`${box0}`}>유적</div>
-                <div className={`${box0}`}>숲</div>
+                <div className={`${box0}`}>{places[0].shortened}</div>
+                <div className={`${box0}`}>{places[1].shortened}</div>
+                <div className={`${box0}`}>{places[2].shortened}</div>
               </div>
             </div>
 
@@ -147,8 +176,20 @@ export default function CheckBoard() {
 
             {/* 9구역 */}
             <div
-              className={`${box2_col} ${center} border-2 border-blue-600 border-l-[1px] border-t-[1px] border-r-neutral-900 border-b-neutral-900`}
+              className={`${box2_col} ${center} gap-3 border-2 border-blue-600 border-l-[1px] border-t-[1px] border-r-neutral-900 border-b-neutral-900`}
             >
+              <button
+                onClick={fillBtnClickHandler}
+                className={`${box0} !w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
+              >
+                - 채우기
+              </button>
+              <button
+                onClick={clearBtnClickHandler}
+                className={`${box0} !w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
+              >
+                모두 지우기
+              </button>
               <button
                 onClick={submitBtnClickHandler}
                 className={`${box0} !w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
