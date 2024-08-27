@@ -16,7 +16,7 @@ export default function CasePart({
       <div className="flex justify-between items-center">
         <div className="flex gap-3 w-full text-2xl">
           <h1 className="text-orange-400">{`사건 ${id}`}</h1>
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <span className="h-6 border-l-2 border-orange-400" />
           </div>
           <h1>{title}</h1>
@@ -28,7 +28,7 @@ export default function CasePart({
 
       <div>
         <div className="flex w-full">
-          <p>{description}</p>
+          <p className="break-keep">{description}</p>
         </div>
       </div>
     </div>

@@ -215,3 +215,9 @@
 - Chapter Page
   - 진술 파트
     - 난이도에 따라 문구 출력
+
+#### 0.3.14
+
+- Chapter Page
+  - 진술 파트
+    - description에 break-keep

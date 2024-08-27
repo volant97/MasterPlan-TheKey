@@ -19,6 +19,7 @@ export default function ChapterPage({ params }: Props) {
   // TODO : json 데이터 정리 및 검증
   // TODO : input select로
   // TODO : 수사시작, 각버튼에도 별 부여
+  // 가이드 페이지 제작
 
   const data: CaseData = (jsonData as JsonData)[params.id];
 
