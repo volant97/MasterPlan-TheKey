@@ -12,7 +12,7 @@ export default function CasePart({
   difficulty,
 }: Props) {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 w-full">
       <div className="flex justify-between items-center">
         <div className="flex gap-3 w-full text-2xl">
           <h1 className="text-orange-400">{`사건 ${id}`}</h1>

@@ -1,4 +1,94 @@
 {
+  "test0": {
+    "title": "",
+    "description": "",
+    "difficulty": 1,
+    "suspects": [
+      {
+        "name": "",
+        "shortened": "",
+        "description": ["", ""],
+        "attributes": ""
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "description": [""],
+        "attributes": ""
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "description": [""],
+        "attributes": ""
+      }
+    ],
+    "places": [
+      {
+        "name": "",
+        "shortened": "",
+        "type": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "type": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "type": "",
+        "description": ""
+      }
+    ],
+    "weapons": [
+      {
+        "name": "",
+        "shortened": "",
+        "weight": "",
+        "description": [""]
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "weight": "",
+        "description": [""]
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "weight": "",
+        "description": [""]
+      }
+    ],
+    "clues": [[""], [""]],
+    "statements": [
+      {
+        "person": "",
+        "text": [""]
+      },
+      {
+        "person": "",
+        "text": [""]
+      },
+      {
+        "person": "",
+        "text": [""]
+      }
+    ],
+    "answers": {
+      "who": "",
+      "what": "",
+      "where": ""
+    },
+    "checkboardAnswers": {
+      "answer1": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "answer2": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "answer3": [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }
+  },
   "test1": {
     "title": "할리우드에서의 죽음",
     "description": "논리탐정 로지코는 할리우드 힐스의 저택에서 열리는 호화 디너 파티에 초대를 받고 생각했습니다. '아, 나도 이제 성공했구나!' 그러나 아쉽게도 이 파티에서 로지코는 귀빈이 아니라, 귀빈의 살인 사건을 해결할 탐정이었습니다.",
@@ -11,7 +101,7 @@
           "남편을 두 토막으로 자르는 마술을 완벽하게 해낸 마술사.",
           "남편의 몸은 그 후에 사라졌다"
         ],
-        "attributes": "168cm / 왼족잡이 / 녹색 눈 / 금발"
+        "attributes": "168cm / 왼손잡이 / 녹색 눈 / 금발"
       },
       {
         "name": "미드나이트 3세",
@@ -221,6 +311,105 @@
       "answer1": [2, 2, 1, 2, 1, 2, 1, 2, 2],
       "answer2": [2, 1, 2, 1, 2, 2, 2, 2, 1],
       "answer3": [2, 1, 2, 2, 2, 1, 1, 2, 2]
+    }
+  },
+  "1": {
+    "title": "공원에서의 죽음",
+    "description": "탐정 지우는 공원을 걸어가다 많은 사람들이 모여있는 모습을 보았습니다. '무슨 일이 생겼나?'하며 걸어가는 순간, 생각보다 더 끔찍한 일임을 직감했습니다. 탐정이 되고 해결해야 할 첫 번째 살인 사건이었습니다.",
+    "difficulty": 1,
+    "suspects": [
+      {
+        "name": "대학생",
+        "shortened": "대학생",
+        "description": [
+          "근처 대학교에 다니는 남학생.",
+          "큰 충격에 빠진 듯 얼이 나간 표정이다."
+        ],
+        "attributes": "180cm / 오른손잡이 / 갈색 눈 / 검은 머리"
+      },
+      {
+        "name": "카페 사장",
+        "shortened": "카페사장",
+        "description": [
+          "작은 동네 카페를 운영한다.",
+          "장사도 잘 안되는데 동네에 이런 일이 생겨서 걱정인 것 같다."
+        ],
+        "attributes": "165cm / 왼손잡이 / 초록 눈 / 노란 머리"
+      },
+      {
+        "name": "노숙자",
+        "shortened": "노숙자",
+        "description": [
+          "집 없이 근처를 떠돌아다닌다.",
+          "성질이 더럽기로 유명한가 보다."
+        ],
+        "attributes": ""
+      }
+    ],
+    "places": [
+      {
+        "name": "",
+        "shortened": "",
+        "type": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "type": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "type": "",
+        "description": ""
+      }
+    ],
+    "weapons": [
+      {
+        "name": "",
+        "shortened": "",
+        "weight": "",
+        "description": [""]
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "weight": "",
+        "description": [""]
+      },
+      {
+        "name": "",
+        "shortened": "",
+        "weight": "",
+        "description": [""]
+      }
+    ],
+    "clues": [[""], [""]],
+    "statements": [
+      {
+        "person": "",
+        "text": [""]
+      },
+      {
+        "person": "",
+        "text": [""]
+      },
+      {
+        "person": "",
+        "text": [""]
+      }
+    ],
+    "answers": {
+      "who": "",
+      "what": "",
+      "where": ""
+    },
+    "checkboardAnswers": {
+      "answer1": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "answer2": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "answer3": [0, 0, 0, 0, 0, 0, 0, 0, 0]
     }
   }
 }

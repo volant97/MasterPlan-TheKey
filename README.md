@@ -227,3 +227,8 @@
 - ChapterJsonData
   - 1단계 test 버전 제작
   - 용의자 description type 변경
+
+#### 0.4.2
+
+- ChapterJsonData
+  - 사건1 제작중
