@@ -45,7 +45,7 @@ export default function ChapterPage({ params }: Props) {
       <CluePart data={data.clues} />
 
       {/* 6 - 진술 */}
-      <StatementPart data={data.statements} />
+      <StatementPart data={data.statements} difficulty={data.difficulty} />
 
       {/* 7 - 정답 */}
       <AnswerPart data={data.answers} />
