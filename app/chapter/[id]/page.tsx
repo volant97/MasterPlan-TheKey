@@ -23,12 +23,13 @@ export default function ChapterPage({ params }: Props) {
   const data: CaseData = (jsonData as JsonData)[params.id];
 
   return (
-    <div className="flex flex-col items-center gap-12">
+    <div className="flex flex-col items-center gap-12 mb-20">
       {/* 1 - 사건 */}
       <CasePart
         id={params.id}
         title={data.title}
         description={data.description}
+        difficulty={data.difficulty}
       />
 
       {/* 2 - 용의자 */}

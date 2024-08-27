@@ -61,6 +61,7 @@ export default function AnswerPart({ data }: Props) {
             </div>
           </div>
         </div>
+
         <div className="flex justify-center items-center">
           <button
             onClick={submitBtnClickHandler}
@@ -69,6 +70,7 @@ export default function AnswerPart({ data }: Props) {
             정답 제출
           </button>
         </div>
+
         {feedBack !== null && (
           <div className="flex flex-col items-center">
             {feedBack === 1 ? (

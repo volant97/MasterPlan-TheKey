@@ -47,6 +47,7 @@ export interface CheckboardAnswers {
 export interface CaseData {
   title: string;
   description: string;
+  difficulty: number;
   suspects: Suspect[];
   places: Place[];
   weapons: Weapon[];

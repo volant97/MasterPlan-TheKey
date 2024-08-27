@@ -71,9 +71,11 @@ export default function CheckBoard({
   };
 
   const clearBtnClickHandler = () => {
-    setArr1(arr1.map((v) => 0));
-    setArr2(arr2.map((v) => 0));
-    setArr3(arr3.map((v) => 0));
+    if (confirm("체크보드의 내용을 모두 지우겠습니까?")) {
+      setArr1(arr1.map((v) => 0));
+      setArr2(arr2.map((v) => 0));
+      setArr3(arr3.map((v) => 0));
+    }
   };
 
   const submitBtnClickHandler = () => {
@@ -91,7 +93,7 @@ export default function CheckBoard({
   };
 
   return (
-    <div className="flex flex-col gap-8 w-full">
+    <div className="flex flex-col gap-10 w-full">
       <div className="flex flex-col w-full h-full *:text-sm *:text-balance *:text-center">
         {/* 1단 */}
         <div className={`${box1}`}>
@@ -190,15 +192,18 @@ export default function CheckBoard({
               >
                 모두 지우기
               </button>
-              <button
-                onClick={submitBtnClickHandler}
-                className={`${box0} !w-2/3 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
-              >
-                100% 도전
-              </button>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-center items-center">
+        <button
+          onClick={submitBtnClickHandler}
+          className={`w-32 h-12 text-orange-400 hover:bg-orange-500 hover:text-white hover:scale-105 active:scale-95 rounded-lg border-2 border-orange-400`}
+        >
+          100% 도전
+        </button>
       </div>
 
       <div>
