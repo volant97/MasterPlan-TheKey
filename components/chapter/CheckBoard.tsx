@@ -22,7 +22,7 @@ const box2_grid = "grid grid-cols-3 grid-flow-row w-full";
 const box3 = "flex w-full";
 const box3_col = "flex flex-col w-full";
 const box0 =
-  "flex justify-center items-center w-full h-10 text-orange-400 text-xs";
+  "flex justify-center items-center w-full h-10 text-orange-400 text-xs break-keep";
 const center = "justify-center items-center";
 
 interface Props {
@@ -31,6 +31,8 @@ interface Props {
   weapons: Weapon[];
   checkboardAnswers: CheckboardAnswers;
 }
+
+// TODO : 표 인물, 장소, 무기 등 클릭 시 배경색상 변경
 
 export default function CheckBoard({
   suspects,

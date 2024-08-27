@@ -2,8 +2,7 @@
 export interface Suspect {
   name: string;
   shortened: string;
-  description: string;
-  details: string;
+  description: string[];
   attributes: string;
 }
 

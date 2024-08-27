@@ -221,3 +221,9 @@
 - Chapter Page
   - 진술 파트
     - description에 break-keep
+
+#### 0.4.1
+
+- ChapterJsonData
+  - 1단계 test 버전 제작
+  - 용의자 description type 변경

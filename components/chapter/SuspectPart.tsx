@@ -21,8 +21,9 @@ export default function SuspectPart({ data }: Props) {
           >
             <h3 className="text-orange-400 text-xl">{v.name}</h3>
             <div>
-              <p>{v.description}</p>
-              <p>{v.details}</p>
+              {v.description.map((v, i) => (
+                <p key={i}>{v}</p>
+              ))}
             </div>
             <div>
               <p className="text-orange-500">{v.attributes}</p>
