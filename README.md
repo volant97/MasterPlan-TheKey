@@ -232,3 +232,10 @@
 
 - ChapterJsonData
   - 사건1 제작중
+
+### 2024.09.03
+
+#### 0.4.3
+
+- ChapterJsonData
+  - 사건1 제작중
