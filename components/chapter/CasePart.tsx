@@ -12,17 +12,15 @@ export default function CasePart({
   difficulty,
 }: Props) {
   return (
-    <div className="flex flex-col gap-6 w-full">
-      <div className="flex justify-between items-center">
-        <div className="flex gap-3 w-full text-2xl">
-          <h1 className="text-orange-400">{`사건 ${id}`}</h1>
-          <div className="flex items-center">
-            <span className="h-6 border-l-2 border-orange-400" />
+    <div className="flex flex-col gap-10 w-full">
+      <div className="flex flex-col items-start">
+        <div className="relative flex gap-3 w-full text-2xl">
+          <h1 className="text-orange-400 min-w-16">{`사건 ${id}`}</h1>
+          <div className="flex justify-center items-center h-full">
+            <span className="h-6 border-l-2 border-orange-400 mt-1" />
           </div>
           <h1>{title}</h1>
-        </div>
-        <div className="flex justify-end items-center w-16">
-          <p>{difficulty} 단계</p>
+          <p className="absolute top-8 w-16 text-base">난이도 {difficulty}</p>
         </div>
       </div>
 

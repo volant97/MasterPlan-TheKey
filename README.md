@@ -239,3 +239,8 @@
 
 - ChapterJsonData
   - 사건1 제작중
+
+#### 0.4.4
+
+- Chapter Page
+  - 사건 파트 간격 조정
