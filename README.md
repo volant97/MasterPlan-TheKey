@@ -244,3 +244,10 @@
 
 - Chapter Page
   - 사건 파트 간격 조정
+
+#### 0.4.5
+
+- Main Page
+  - 챕터 버튼 열림, 잠금 표시 변경
+- Chapter Page
+  - 난이도별 표시

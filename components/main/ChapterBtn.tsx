@@ -13,7 +13,11 @@ export default function ChapterBtn({ chapter, isActivated }: Props) {
         disabled={!isActivated}
       >
         <p className="text-2xl">{chapter}</p>
-        <p className="text-lg">☆☆☆</p>
+        {isActivated ? (
+          <p className="text-lg">🔑</p>
+        ) : (
+          <p className="text-lg">🔒</p>
+        )}
       </button>
     </Link>
   );
