@@ -12,11 +12,12 @@ export default function StatementPart({ data, difficulty }: Props) {
         <h2 className="absolute left-1 -rotate-12 text-xl bg-orange-400 rounded-lg px-2 py-1">
           진술
         </h2>
-        {difficulty === 2 || difficulty === 4 ? (
-          <p className="absolute right-0 bottom-3 text-xs text-orange-400">
-            범인은 거짓말을 합니다.
-          </p>
-        ) : null}
+
+        <p className="absolute right-0 bottom-3 text-xs text-orange-400">
+          {difficulty === 1 || difficulty === 3
+            ? "모두 진실만을 말합니다."
+            : "범인은 거짓말을 합니다."}
+        </p>
 
         <span className="absolute left-[5%] top-8 w-[95%] border-b-2 border-orange-400" />
       </div>
